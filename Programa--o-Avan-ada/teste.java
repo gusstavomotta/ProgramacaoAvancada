@@ -1,6 +1,40 @@
 
 public class teste {
 
+    public float valor;
+    public int idade;
+    public String nome;
+
+    public teste(float valor, int idade, String nome) {
+        this.valor = valor;
+        this.idade = idade;
+        this.nome = nome;
+    }
+
+    public float getValor() {
+        return valor;
+    }
+
+    public void setValor(float valor) {
+        this.valor = valor;
+    }
+
+    public int getIdade() {
+        return idade;
+    }
+
+    public void setIdade(int idade) {
+        this.idade = idade;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
     public static void main(String[] args) {
 
         System.out.println("teste");
