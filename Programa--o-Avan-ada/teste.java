@@ -35,14 +35,6 @@ public class teste {
         this.nome = nome;
     }
 
-    public static void main(String[] args) {
-
-        System.out.println("teste");
-        String string = "teste1";
-        System.out.println(retornaString(string));
-        somaValores(0, 7);
-    }
-
     public static String retornaString(String string) {
 
         return string;
@@ -61,4 +53,12 @@ public class teste {
         return a + b;
     }
 
+    public static void main(String[] args) {
+
+        System.out.println("teste");
+        String string = "teste1";
+        System.out.println(string.length());
+        System.out.println(retornaString(string));
+        somaValores(0, 7);
+    }
 }
