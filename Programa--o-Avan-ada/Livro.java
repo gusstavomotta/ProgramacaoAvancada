@@ -8,7 +8,7 @@ public class Livro {
     private EnumLivro categoria;
     private Date data;
 
-    public Livro(int id, String titulo, EnumLivro categoria, String autor, Date data) {
+    public Livro(int id, String titulo, String autor, EnumLivro categoria, Date data) {
 
         this.id = id;
         this.titulo = titulo;
