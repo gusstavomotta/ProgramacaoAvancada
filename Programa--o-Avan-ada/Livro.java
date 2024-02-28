@@ -9,6 +9,7 @@ public class Livro {
     private Date data;
 
     public Livro(int id, String titulo, EnumLivro categoria, String autor, Date data) {
+
         this.id = id;
         this.titulo = titulo;
         this.categoria = categoria;
