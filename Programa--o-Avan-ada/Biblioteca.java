@@ -7,6 +7,7 @@ public class Biblioteca {
 
     public void addLivro(Livro livro) {
         listaLivros.add(livro);
+        System.out.println("Livro adicionado com sucesso!");
     }
 
     public void removerLivro(int id_param) {
@@ -14,9 +15,11 @@ public class Biblioteca {
         for (Livro l : listaLivros) {
             if (l.getId() == id_param) {
                 listaLivros.remove(l);
+                System.out.println("Livro removido com sucesso!");
                 return;
             }
         }
+        System.out.println("Livro não existe!");
     }
 
     public int retornaTotalLivros() {
