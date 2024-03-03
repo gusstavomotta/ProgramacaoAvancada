@@ -4,8 +4,12 @@ import java.util.List;
 public class Biblioteca {
 
     private List<Livro> listaLivros = new ArrayList<>();
+    private List<Autor> listaAutores = new ArrayList<>();
+
 
     public void addLivro(Livro livro) {
+        livro.getAutor().incrementaCount();
+        listaAutores.add(livro.getAutor());
         listaLivros.add(livro);
         System.out.println("Livro adicionado com sucesso!");
     }
@@ -25,5 +29,28 @@ public class Biblioteca {
     public int retornaTotalLivros() {
         return listaLivros.size();
     }
-
+    public int retornaTotalAutores() {
+        return listaAutores.size();
+    }
+    public void printaAutor(){
+        if (listaAutores.size() == 0){
+            System.out.println("Lista de autores vazia!");
+            return;
+        }
+        for (Autor a: listaAutores) {
+            System.out.println(a.toString());
+        }
+        System.out.println("Todos os autores printados!");
+    }
+    public void printaLivro(){
+        if (listaLivros.size() == 0){
+            System.out.println("Lista de livros vazia!");
+            return;
+        }
+        for(Livro l : listaLivros){
+            System.out.println(l.toString());
+        }
+        System.out.println("Todos os livros printados!");
+    }
+    
 }

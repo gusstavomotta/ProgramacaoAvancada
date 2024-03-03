@@ -4,11 +4,11 @@ public class Livro {
 
     private int id;
     private String titulo;
-    private String autor;
+    private Autor autor;
     private EnumLivro categoria;
     private Date data;
 
-    public Livro(int id, String titulo, String autor, EnumLivro categoria, Date data) {
+    public Livro(int id, String titulo, Autor autor, EnumLivro categoria, Date data) {
 
         this.id = id;
         this.titulo = titulo;
@@ -41,11 +41,11 @@ public class Livro {
         this.categoria = categoria;
     }
 
-    public String getAutor() {
+    public Autor getAutor() {
         return autor;
     }
 
-    public void setAutor(String autor) {
+    public void setAutor(Autor autor) {
         this.autor = autor;
     }
 
@@ -55,6 +55,16 @@ public class Livro {
 
     public void setData(Date data) {
         this.data = data;
+    }
+
+    @Override
+    public String toString() {
+        String ret = "Id do livro: " + this.id + "\n";
+        ret += "Titulo do livro: " + this.titulo + "\n";
+        ret += "Nome do autor: "  + this.getAutor().getNome()+ "\n";
+        ret += "Gênero: " + categoria + "\n";
+        ret += "Data de lançamento: " + this.data + "\n";
+        return ret;
     }
 
 }
