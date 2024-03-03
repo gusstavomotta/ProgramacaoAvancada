@@ -61,7 +61,7 @@ public class Livro {
     public String toString() {
         String ret = "Id do livro: " + this.id + "\n";
         ret += "Titulo do livro: " + this.titulo + "\n";
-        ret += "Nome do autor: "  + this.getAutor().getNome()+ "\n";
+        ret += "Nome do autor: " + this.getAutor().getNome() + "\n";
         ret += "Gênero: " + categoria + "\n";
         ret += "Data de lançamento: " + this.data + "\n";
         return ret;

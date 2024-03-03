@@ -9,18 +9,22 @@ public class MainBiblioteca {
         Biblioteca biblio = new Biblioteca();
         DateFormat df = new SimpleDateFormat("dd/MM/yyyy");
 
-        Autor autor1 = new Autor("gustavo" , 20);
+        Autor autor1 = new Autor("gustavo", 20);
+        Autor autor2 = new Autor("gordao", 20);
+        Autor autor3 = new Autor("caio", 20);
+
         Livro livro = new Livro(1, "teste", autor1, EnumLivro.DIDATICO, df.parse("29/08/2023"));
+        Livro livro2 = new Livro(2, "livro teste", autor2, EnumLivro.DIDATICO, df.parse("29/11/2024"));
+        Livro livro3 = new Livro(3, "desgraça", autor2, EnumLivro.DIDATICO, df.parse("31/01/2008"));
 
         biblio.addLivro(livro);
-        biblio.printaAutor();
-        biblio.printaLivro();
+        biblio.addLivro(livro2);
+        biblio.addLivro(livro3);
 
-        //posso criar um array de livros para cada autor e quando a biblio add um livro o livro deve ser add ao array de livros do autor
-        //criar a classe autor com nome do autor
-        //posso criar uma function para percorrer o array de livros da biblio e contar o numero de livros q cada autor tem
-        // posso fazer um array de autores e verificar se o nome dele está dentro de algum livro dentro do array de bibliotecas e dai fazer o count
-        //acho é melhor criar o autor, passar ele no livro, add o livro na biblio, depois percorre a biblio comparando o autor e faz o count
-        //quando eu add um livro eu posso retornar o autor e colocar ele em um array de autores, depois percorro, e comparo, e conto
+        biblio.printaAutor();
+        // biblio.printaLivro();
+        biblio.ordenarListaAutores();
+        biblio.printaAutor();
+
     }
 }
