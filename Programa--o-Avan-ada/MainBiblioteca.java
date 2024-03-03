@@ -20,9 +20,11 @@ public class MainBiblioteca {
         biblio.addLivro(livro);
         biblio.addLivro(livro2);
         biblio.addLivro(livro3);
+        biblio.printaLivro();
 
-        biblio.printaAutor();
-        // biblio.printaLivro();
+        biblio.addLivro(livro3);
+        
+        biblio.printaLivro();
         biblio.ordenarListaAutores();
         biblio.printaAutor();
 

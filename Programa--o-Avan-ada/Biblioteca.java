@@ -9,12 +9,17 @@ public class Biblioteca {
     private List<Autor> listaAutores = new ArrayList<>();
 
     public void addLivro(Livro livro) {
+
         livro.getAutor().incrementaCount();
-        listaAutores.add(livro.getAutor());
+
+        if(!listaAutores.contains(livro.getAutor()))
+            listaAutores.add(livro.getAutor());
+        
         listaLivros.add(livro);
         System.out.println("Livro adicionado com sucesso!");
+        
     }
-
+            
     public void removerLivro(int id_param) {
 
         for (Livro l : listaLivros) {
