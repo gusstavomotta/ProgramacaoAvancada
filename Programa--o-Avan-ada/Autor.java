@@ -1,8 +1,12 @@
-public class Autor {
+//se implementar o comparable tem que criar o metodo compareTO, a logica esta no fim do codigo
+//
+
+public class Autor // implements Comparable
+{
 
     private String nome;
     private int idade;
-    private int num_publicações;
+    private Integer num_publicações;
 
     public Autor(String nome, int idade) {
         this.nome = nome;
@@ -25,7 +29,7 @@ public class Autor {
         this.idade = idade;
     }
 
-    public int getNum_publicações() {
+    public Integer getNum_publicações() {
         return num_publicações;
     }
 
@@ -40,4 +44,17 @@ public class Autor {
         ret += "Número de publicações: " + this.num_publicações + "\n";
         return ret;
     }
+
+    // @Override
+    // public int compareTo(Object o) {
+    // Autor y = (Autor) o;
+    // if (y.getNum_publicações() > this.getNum_publicações()) {
+    // return -1;
+    // } else if (y.getNum_publicações() < this.getNum_publicações()) {
+    // return 1;
+    // } else {
+    // return 0;
+    // }
+    // return y.getNum_publicações().compareTo(this.num_publicações);
+    // }
 }

@@ -12,14 +12,14 @@ public class Biblioteca {
 
         livro.getAutor().incrementaCount();
 
-        if(!listaAutores.contains(livro.getAutor()))
+        if (!listaAutores.contains(livro.getAutor()))
             listaAutores.add(livro.getAutor());
-        
+
         listaLivros.add(livro);
         System.out.println("Livro adicionado com sucesso!");
-        
+
     }
-            
+
     public void removerLivro(int id_param) {
 
         for (Livro l : listaLivros) {
@@ -40,26 +40,12 @@ public class Biblioteca {
         return listaAutores.size();
     }
 
-    public void printaAutor() {
-        if (listaAutores.size() == 0) {
-            System.out.println("Lista de autores vazia!");
-            return;
-        }
-        for (Autor a : listaAutores) {
-            System.out.println(a.toString());
-        }
-        System.out.println("Todos os autores printados!");
+    public List<Autor> retornaListaAutores() {
+        return this.listaAutores;
     }
 
-    public void printaLivro() {
-        if (listaLivros.size() == 0) {
-            System.out.println("Lista de livros vazia!");
-            return;
-        }
-        for (Livro l : listaLivros) {
-            System.out.println(l.toString());
-        }
-        System.out.println("Todos os livros printados!");
+    public List<Livro> retornaListaLivros() {
+        return this.listaLivros;
     }
 
     public void ordenarListaAutores() {
