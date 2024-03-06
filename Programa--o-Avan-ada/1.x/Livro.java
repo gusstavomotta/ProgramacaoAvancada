@@ -57,7 +57,6 @@ public class Livro {
         this.data = data;
     }
 
-    @Override
     public String toString() {
         String ret = "Id do livro: " + this.id + "\n";
         ret += "Titulo do livro: " + this.titulo + "\n";
@@ -66,5 +65,6 @@ public class Livro {
         ret += "Data de lançamento: " + this.data + "\n";
         return ret;
     }
+
 
 }

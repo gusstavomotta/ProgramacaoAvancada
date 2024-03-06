@@ -11,10 +11,9 @@ public class Biblioteca {
     public void addLivro(Livro livro) {
 
         livro.getAutor().incrementaCount();
-
         if (!listaAutores.contains(livro.getAutor()))
             listaAutores.add(livro.getAutor());
-
+        
         listaLivros.add(livro);
         System.out.println("Livro adicionado com sucesso!");
 
@@ -57,4 +56,32 @@ public class Biblioteca {
         });
     }
 
+    public StringBuilder toString(boolean turbo){
+        StringBuilder retorno = new StringBuilder();
+
+        for (Livro l : this.listaLivros){
+
+            retorno.append(l.getId())
+            .append(l.getTitulo())
+            .append(l.getAutor().getNome())
+            .append(l.getCategoria())
+            .append(l.getData());
+        }
+        return retorno;
+
+    }
+    public String toString(){
+
+        String retorno = "";
+        for (Livro l : this.listaLivros){
+
+            retorno = "Id do livro: " + l.getId() + "\n";
+            retorno += "Titulo do livro: " + l.getTitulo() + "\n";
+            retorno += "Nome do autor: " + l.getAutor().getNome() + "\n";
+            retorno += "Gênero: " + l.getCategoria() + "\n";
+            retorno += "Data de lançamento: " + l.getData() + "\n";
+        }
+        return retorno;
+
+    }
 }

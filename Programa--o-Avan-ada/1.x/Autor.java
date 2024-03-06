@@ -1,12 +1,14 @@
 //se implementar o comparable tem que criar o metodo compareTO, a logica esta no fim do codigo
 //
-
+    
 public class Autor // implements Comparable
 {
 
     private String nome;
     private int idade;
-    private Integer num_publicações;
+    //OBJETOS INTEGER NAO PODEM SER INCREMENTADOS
+    //TIVE QUE MUDAR PARA INT PARA RODAR O OUTRO CODIGO
+    private int num_publicações;
 
     public Autor(String nome, int idade) {
         this.nome = nome;
@@ -29,12 +31,12 @@ public class Autor // implements Comparable
         this.idade = idade;
     }
 
-    public Integer getNum_publicações() {
+    public int getNum_publicações() {
         return num_publicações;
     }
 
     public void incrementaCount() {
-        this.num_publicações += 1;
+        this.num_publicações ++;
     }
 
     @Override
