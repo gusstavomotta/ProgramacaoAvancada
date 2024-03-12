@@ -41,7 +41,7 @@ public class MainBiblioteca {
         // }
         // Collections.sort(lst_autores);
             
-        for (int i = 1; i < 5000; i++) {
+        for (int i = 1; i < 15000; i++) {
 
             Autor autor2 = new Autor("gustavo", 20);
             Livro livro4 = new Livro(i, "a", autor2, EnumLivro.DIDATICO, df.parse("29/08/2023"));
